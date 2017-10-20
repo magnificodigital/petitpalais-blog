@@ -1,0 +1,1 @@
+<a href="#" id="totop" class="scroll vintage"><?php pll_e('De volta ao topo'); ?></a>
