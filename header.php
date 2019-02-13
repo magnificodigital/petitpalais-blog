@@ -92,12 +92,24 @@
 							<li>
 								<a href="<?php echo $cat->url; ?>"><?php echo $cat->title; ?></a>
 								<?php if ($cat->object == "category") : ?>
+
+								<?php
+									
+									//echo $cat->url;
+									$split = explode("/",$cat->url);
+									$count = count($split);
+									$slug = $split[$count-2];
+									$category = get_category_by_slug($slug);
+									//print_r($category);
+
+								?>
+
 								<div class="submenu">
 									<div class="container-fluid">
 										<div class="row">
 											<?php
 											$args = array(
-												'category_name' => $cat->slug,
+												'cat' => $category->cat_ID,
 												'showposts' => 4, 
 											);
 											$loop = new WP_query($args);

@@ -53,7 +53,10 @@
 							<div class="row">
 								<div class="col-xs-4">
 									<a href="<?php echo $post['link']; ?>">
-										<?php the_post_thumbnail('thumbnail', array('title' => get_the_title(), 'alt' => get_the_title())); ?>
+
+										<?php echo $post['thumbnail']; ?>
+
+										<?php //the_post_thumbnail('thumbnail', array('title' => get_the_title(), 'alt' => get_the_title())); ?>
 									</a>
 								</div>
 								<div class="col-xs-8">
